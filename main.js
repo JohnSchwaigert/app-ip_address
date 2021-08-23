@@ -41,6 +41,7 @@ function getFirstIpAddress(cidrStr, callback) {
     [firstIpAddress] = cidr.toArray(options);
     // Check if IPV4 has a mapped IPV6 address
     let mappedAddress = getIpv4MappedIpv6Address(firstIpAddress);
+    console.log(`  Inside IPV4: ${mappedAddress}`);
   }
   // Call the passed callback function.
   // Node.js convention is to pass error data as the first argument to a callback.
